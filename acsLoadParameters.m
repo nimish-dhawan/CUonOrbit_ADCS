@@ -33,8 +33,8 @@ K_w = 50e4;
 % SIM CONFIG
 tspan               = 3600 * 24;
 write_output        = false;                        % Generate .a attitude file for STK
-outputName          = 'attitude_SSO_attTable.a';  
-simFile             = 'ADCS_onOrbit_14_4_3.slx';
+outputName          = 'attitude_060125_00h.a';  
+simFile             = 'ADCS_onOrbit.slx';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initial Date and Constants
