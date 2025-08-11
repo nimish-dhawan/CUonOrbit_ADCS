@@ -31,7 +31,7 @@ K_w = 50e4;
 
 % =======================================================================
 % SIM CONFIG
-tspan               = 3600 * 10;
+tspan               = 3600 * 24;
 write_output        = false;                        % Generate .a attitude file for STK
 outputName          = 'attitude_SSO_attTable.a';  
 simFile             = 'ADCS_onOrbit_14_4_3.slx';
@@ -40,9 +40,9 @@ simFile             = 'ADCS_onOrbit_14_4_3.slx';
 % Initial Date and Constants
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 YYYY = 2025;
-DD = 01;
-MM = 01;
-HH = 16;
+DD = 21;
+MM = 06;
+HH = 00;
 MIN = 00;
 SEC = 000;
 dYear = decyear(YYYY,MM,DD);
@@ -78,7 +78,7 @@ J_wheels = [12894 0 0; 0 12774 0; 0 0 18389] * 1e-09;     % Cubespace Bigger Whe
 % MAGNETORQUER SETUP
 
 r_m = [0 0 0; 0 0 0; 0 0 0];        % Location of the magnetorquers from COM
-A_m = eye(3);           % Each magnetorquer aligned with an axis of the s/c
+A_m = eye(3);                       % Each magnetorquer aligned with an axis of the s/c
 
 % =======================================================================
 % SPACECRAFT BUS SETUP
@@ -118,13 +118,13 @@ tau = 300;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Orbital Elements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-h_apogee        = 520;                % km
+h_apogee        = 535;                % km
 semimajor_axis  = rE + h_apogee;      % km
 e               = 6.91944e-15;
-inc             = 97.4065;            % deg
-raan            = 132.112;            % deg
+inc             = 97.4377;            % deg
+raan            = 226.816;            % deg
 omega           = 0;                  % deg
-true_anomaly    = 1.42146e-14;        % deg
+true_anomaly    = 0.0994843;        % deg
 
 period = sqrt((4* pi^2 * semimajor_axis^3)/(mu));
 
