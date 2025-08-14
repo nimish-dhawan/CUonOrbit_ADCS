@@ -33,7 +33,7 @@ K_w = 50e4;
 % SIM CONFIG
 tspan               = 3600 * 24;
 write_output        = false;                        % Generate .a attitude file for STK
-outputName          = 'attitude_060125_00h.a';  
+outputName          = 'C:\Users\nimis\Documents\MATLAB\CUonOrbit\ADCS_sim\Attitude Files\attitude_aDayInLife_210625_00h.a';  
 simFile             = 'ADCS_onOrbit.slx';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,9 +61,11 @@ mag_moment = [0.005; 0.005; 0.005];  % Magnetic Dipole
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % =======================================================================
 % INITIAL CONDITIONS
-w_b_ini = [0; 0.1; 0.1];
-q_ini   = [0; 0; 0; 1];     % Initial quaternion
-m       = 4;                % Spacecraft mass in kg
+% w_b_ini = [0; 0.1; 0.1];                                % For detumble
+w_b_ini = [0; 0; 0];
+% q_ini   = [0; 0; 0; 1];                                 % Initial quaternion (For detumble)
+q_ini   = [-0.629902; -0.322621; -0.665219; 0.237957];  % Initial quaternion for nadir pointing at 00:00:00 on 21/06/2025
+m       = 4;                                            % Spacecraft mass in kg
 
 % =======================================================================
 % WHEELS SETUP
